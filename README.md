@@ -20,11 +20,26 @@ is correctly displayed across various scripts.
 
 2.
 ```xml
-<dependency>
-    <groupId>com.ramezakasheh</groupId>
-    <artifactId>jasper-noto-fonts</artifactId>
-    <version>1.0.0</version>
-</dependency>
+<project>
+    ...
+    <repositories>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages Repository</name>
+            <url>https://maven.pkg.github.com/RamezAkasheh/jasper-noto-fonts</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ramezakasheh</groupId>
+            <artifactId>jasper-noto-fonts</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
+    ...
+</project>
 ```
 
 3. Ensure that the fonts are correctly referenced in your JasperReports
