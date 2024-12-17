@@ -34,7 +34,7 @@ is correctly displayed across various scripts.
         <dependency>
             <groupId>com.ramezakasheh</groupId>
             <artifactId>jasper-noto-fonts</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
     </dependencies>
 
