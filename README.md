@@ -22,17 +22,10 @@ is correctly displayed across various scripts.
 ```xml
 <project>
     ...
-    <repositories>
-        <repository>
-            <id>github</id>
-            <name>GitHub Packages Repository</name>
-            <url>https://maven.pkg.github.com/RamezAkasheh/jasper-noto-fonts</url>
-        </repository>
-    </repositories>
-
+    
     <dependencies>
         <dependency>
-            <groupId>com.ramezakasheh</groupId>
+            <groupId>io.github.ramezakasheh</groupId>
             <artifactId>jasper-noto-fonts</artifactId>
             <version>1.0.3</version>
         </dependency>

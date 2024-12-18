@@ -4,9 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ramezakasheh</groupId>
+    <groupId>io.github.ramezakasheh</groupId>
     <artifactId>jasper-noto-fonts</artifactId>
-    <version>1.0.3</version>
+    <packaging>jar</packaging>
+    <version>1.0.4</version>
+
+    <name>Jasper Noto Fonts</name>
+    <url>https://github.com/RamezAkasheh/jasper-noto-fonts</url>
+    <description>A Maven dependency offering Google Noto Fonts for JasperReports, enhancing cross-script text display and simplifying font management.</description>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -14,11 +19,65 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <developers>
+        <developer>
+            <name>Ramez Akasheh</name>
+            <email>ramez.akasheh+github@gmail.com</email>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>SIL OPEN FONT LICENSE Version 1.1</name>
+            <url>http://scripts.sil.org/OFL</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>git://github.com/RamezAkasheh/jasper-noto-fonts.git</url>
+    </scm>
+
     <distributionManagement>
-        <repository>
+        <snapshotRepository>
             <id>github</id>
             <name>GitHub Packages Repository</name>
             <url>https://maven.pkg.github.com/RamezAkasheh/jasper-noto-fonts</url>
+        </snapshotRepository>
+        <repository>
+            <id>maven</id>
+            <name>Maven Central</name>
+            <url>
+                https://repo1.maven.org/maven2/com/ramezakasheh/jasper-noto-fonts
+            </url>
         </repository>
     </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.6.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.2.3</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
 </project>
