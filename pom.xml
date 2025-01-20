@@ -7,7 +7,7 @@
     <groupId>io.github.ramezakasheh</groupId>
     <artifactId>jasper-noto-fonts</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.4</version>
+    <version>1.0.4-e</version>
 
     <name>Jasper Noto Fonts</name>
     <url>https://github.com/RamezAkasheh/jasper-noto-fonts</url>
